@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "module": "sandbox",
+  "classification": "optional",
+  "execution": "process",
+  "runtime": "go",
+  "placements": [
+    "server"
+  ],
+  "principal_class": 1,
+  "principal_ref": 26,
+  "stages": [
+    {
+      "id": 1,
+      "name": "sandbox-learned-observe",
+      "event_kind": 10753
+    },
+    {
+      "id": 2,
+      "name": "sandbox-learned-load",
+      "event_kind": 10754
+    },
+    {
+      "id": 3,
+      "name": "sandbox-proxy-request-policy",
+      "event_kind": 10755
+    },
+    {
+      "id": 4,
+      "name": "sandbox-proxy-address-policy",
+      "event_kind": 10756
+    }
+  ],
+  "source_sha256": "d905bb58ba17cc2437768f2afe3d09f19baecbc0be110c7524619d2e4db9f61c",
+  "owned_files": [
+    "src/modules/sandbox/module.yaml",
+    "src/modules/sandbox/sandbox_learned.c",
+    "src/modules/sandbox/sandbox_pkg_proxy.c",
+    "src/modules/sandbox/sandbox_learned.h",
+    "src/modules/sandbox/sandbox_pkg_proxy.h",
+    "src/modules/sandbox/include/aimee/sandbox/module_api.h",
+    "src/tests/test_sandbox_pkg_proxy_adapter.c",
+    "docs/modules/sandbox.md",
+    "server-go/modules/sandbox/sandbox.go",
+    "server-go/modules/sandbox/module.go",
+    "server-go/modules/sandbox/proxy_policy.go",
+    "server-go/modules/sandbox/sandbox_test.go",
+    "server-go/modules/sandbox/proxy_policy_test.go"
+  ]
+}
